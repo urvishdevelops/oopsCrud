@@ -3,14 +3,13 @@ include 'dbConfig.php';
 
 class crud extends dbConfig
 {
-
+public $name = "yyeyey";
     public function __construct()
     {
         parent::__construct();
     }
     public function getData($query)
     {
-        echo $query;
         $result = $this->connection->query($query);
 
         if ($result == false) {
@@ -27,6 +26,7 @@ class crud extends dbConfig
         return $rows;
     }
 
+
     public function execute($query)
     {
         // echo '<pre>';
@@ -36,10 +36,8 @@ class crud extends dbConfig
 
         if ($result == False) {
             return False;
-            echo "MISTAKE IN QUERY";
         } else {
             return True;
-            echo "gotcha";
         }
     }
 

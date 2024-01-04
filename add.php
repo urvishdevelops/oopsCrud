@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -35,10 +38,8 @@
             if ($result == True) {
 
                 echo "<font color='green'>Data added successfully.";
-                echo "<br/><a href='index.php'>View Result </a>";
-            } else {
-                echo "The query is not working!";
-            }
+                header("Location:index.php");
+            } 
         }
 
     }

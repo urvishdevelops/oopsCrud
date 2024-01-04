@@ -9,48 +9,53 @@ $id = $crud->escape_string($_GET['id']);
 $result = $crud->getData("SELECT * FROM angellist WHERE id=$id");
 
 
-foreach ($result as $data) {
-    $productName = $data['productName'];
-    $founder = $data['founder'];
-    $productOrigin = $data['productOrigin'];
-    $fakeEmail = $data['fakeEmail'];
+
+foreach ($result as $data=>$value) {
+    $productName = $value['productName'];
+    $founder = $value['founder'];
+    $productOrigin = $value['productOrigin'];
+    $fakeEmail = $value['fakeEmail'];
 }
 ?>
 
-<html>
-
 <head>
-    <title>Edit Data</title>
+    <title>Add Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-    <a href="index.php">Home</a>
+<body style="background-color:rgb(20, 28, 54); color: darkgoldenrod;">
+    
     <br /><br />
+    <a href="index.php"class="btn btn-success mt-4 ml-5" style="margin-left: 10%;" > <-- Home</a>
+    <div class="container justify-content-center mt-5" style="margin-top: 05%">
 
     <form name="form1" method="post" action="editaction.php">
-        <table border="0">
+        <table class="table" >
             <tr>
-                <td>productName</td>
-                <td><input type="text" name="name" value="<?php echo $productName; ?>"></td>
+            <td>Product Name</td>
+                <td><input type="text" name="productName" style="color:black" value="<?php echo $productName; ?>"></td>
             </tr>
             <tr>
-                <td>founder</td>
-                <td><input type="text" name="age" value="<?php echo $founder; ?>"></td>
+            <td>Founder</td>
+                <td><input type="text" name="founder" style="color:black" value="<?php echo $founder; ?>"></td>
             </tr>
             <tr>
-                <td>productOrigin</td>
-                <td><input type="text" name="email" value="<?php echo $productOrigin; ?>"></td>
+            <td>Product Origin</td>
+                <td><input type="text" name="productOrigin" style="color:black" value="<?php echo $productOrigin; ?>"></td>
             </tr>
             <tr>
-                <td>fakeEmail</td>
-                <td><input type="text" name="email" value="<?php echo $fakeEmail; ?>"></td>
+            <td>Fake Email</td>
+                <td><input type="text" name="fakeEmail" style="color:black" value="<?php echo $fakeEmail; ?>"></td>
             </tr>
             <tr>
                 <td><input type="hidden" name="id" value=<?php echo $_GET['id']; ?>></td>
-                <td><input type="submit" name="update" value="Update"></td>
+                <td><input type="submit" name="update" value="Update" style="background-color: #4cae4c; padding:2px 15px 2px 15px ; border-radius: 2px; color: rgb(255, 255, 255);"></td>
             </tr>
         </table>
-    </form>
+        </form>
+        </div>
 </body>
 
 </html>

@@ -2,40 +2,49 @@
 
 <head>
     <title>Add Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+</html>
+<body style="background-color:rgb(20, 28, 54); color: darkgoldenrod;">
 
-<body>
-    <a href="index.php">Home</a>
-    <br /><br />
 
-    <form action="add.php" method="post" name="form1">
-        <table width="25%">
-            <tr>
-                <td>Id</td>
-                <td><input type="text" name="id"></td>
-            </tr>
-            <tr>
-                <td>Product Name</td>
-                <td><input type="text" name="productName"></td>
-            </tr>
-            <tr>
-                <td>Founder</td>
-                <td><input type="text" name="founder"></td>
-            </tr>
-            <tr>
-                <td>Product Origin</td>
-                <td><input type="text" name="productOrigin"></td>
-            </tr>
-            <tr>
-                <td>Fake Email</td>
-                <td><input type="text" name="fakeEmail"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" name="Submit" value="Add"></td>
-            </tr>
-        </table>
-    </form>
+
+    <a href="index.php" class="btn btn-success mt-4 ml-5" style="margin-left: 10%;"> <-- Home</a>
+            <div class="container justify-content-center mt-5" style="margin-top: 05%">
+
+                <form action="add.php" method="post" name="form1">
+                    <table class="table">
+                        <tr>
+                            <td>Id</td>
+                            <td><input type="text" style="color:black" name="id"></td>
+                        </tr>
+                        <tr>
+                            <td>Product Name</td>
+                            <td><input type="text" style="color:black" name="productName"></td>
+                        </tr>
+                        <tr>
+                            <td>Founder</td>
+                            <td><input type="text" style="color:black" name="founder"></td>
+                        </tr>
+                        <tr>
+                            <td>Product Origin</td>
+                            <td><input type="text" style="color:black" name="productOrigin"></td>
+                        </tr>
+                        <tr>
+                            <td>Fake Email</td>
+                            <td><input type="text" style="color:black" name="fakeEmail"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" name="Submit" value="Add"
+                                    style="background-color: #4cae4c; padding:2px 15px 2px 15px ; border-radius: 2px; color: rgb(255, 255, 255);">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
 </body>
 
 </html>
